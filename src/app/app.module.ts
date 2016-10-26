@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { RoamProfileComponent } from './roam-profile/roam-profile.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RoamProfileComponent
   ],
   imports: [
     BrowserModule,
