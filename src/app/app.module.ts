@@ -5,18 +5,35 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RoamProfileComponent } from './roam-profile/roam-profile.component';
+import { RouterModule }   from '@angular/router';
+import {ProfileService} from "./profile.service";
+import { RoamHomeComponent } from './roam-home/roam-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoamProfileComponent
+    RoamProfileComponent,
+    RoamHomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+      },
+      {path: 'home', component: RoamHomeComponent},
+      {path: 'profile', component: RoamProfileComponent}
+    ])
   ],
-  providers: [],
+  providers: [ProfileService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
+
+
