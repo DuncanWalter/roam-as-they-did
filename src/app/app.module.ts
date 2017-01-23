@@ -8,12 +8,14 @@ import { RoamProfileComponent } from './roam-profile/roam-profile.component';
 import { RouterModule }   from '@angular/router';
 import {ProfileService} from "./profile.service";
 import { RoamHomeComponent } from './roam-home/roam-home.component';
+import { RoamLoginComponent } from './roam-login/roam-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoamProfileComponent,
-    RoamHomeComponent
+    RoamHomeComponent,
+    RoamLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,10 +24,10 @@ import { RoamHomeComponent } from './roam-home/roam-home.component';
     RouterModule.forRoot([
       {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '/login',
         pathMatch: 'full'
       },
-      {path: 'home', component: RoamHomeComponent},
+      {path: 'login', component: RoamLoginComponent},
       {path: 'profile', component: RoamProfileComponent}
     ])
   ],

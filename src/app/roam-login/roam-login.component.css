@@ -1,0 +1,30 @@
+/**/
+@keyframes float {
+  0%   {position:relative; top:5vh}
+  50%  {position:relative; top:5vh}
+  100% {position:relative; top:0  }
+}
+.float {
+  animation: float 1.2s ease;
+}
+/**/
+@keyframes fade {
+  0%   {opacity:0; position:relative; top:10vh}
+  50%  {opacity:0; position:relative; top:10vh}
+  100% {opacity:1; position:relative; top:0   }
+}
+.fade {
+  animation: fade 1.2s ease-in;
+}
+/**/
+#roam-icon {
+  background: url(../../assets/roman.jpg) center;
+  padding: 50%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+#roam-icon::after {
+  margin: 0;
+}
