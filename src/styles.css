@@ -18,42 +18,79 @@ body {
   height: 100%;
 }
 .background-overlay {
-  background: url(assets/shatter.png);
+  /*background: url(assets/shatter.png);*/
   width: 100%;
   height: 100%;
 }
 /**/
-input {
-  background-color: azure !important;
+input.roam {
+  font-weight: 200;
+  background-color: white;
   border-radius: 1.5rem !important;
   height: 3rem !important;
   text-align: center;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
   border: none !important;
-  transition: 0.7s ease, box-shadow 0.25s ease;
+  transition: 0.25s ease;
 }
-input:active, input:focus, input:hover {
+input.roam:active, input.roam:focus, input.roam:hover {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
 }
+input.roam:disabled, input.roam:read-only, input.roam:-moz-read-only {
+  background-color: #555555;
+  color: #FFEEBF;
+}
+input.roam.rejected, input.roam.responsive:invalid {
+  background-color: #eb3d68;
+  color: #FFEEBF;
+}
+input.roam.accepted, input.roam.responsive:valid {
+  background-color: #43c72c;
+  color: #FFEEBF;
+}
 /**/
-button {
-  background-color: azure !important;
+button, .button {
+  font-weight: 200 !important;
+  position: relative;
+  background-color: white !important;
   border-radius: 1.5rem !important;
   height: 3rem !important;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   flex:1;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  border: none;
-  transition: 0.7s ease, box-shadow 0.25s ease;
-  font-weight: bold !important;
+  transition: 0.7s linear, box-shadow 0.25s ease, border 0.25s ease;
+  padding: 0.52rem;
+  color: white;
+  border: solid 0.3rem rgba(255,255,255,0);
 }
-button:hover {
+button:hover, .button:hover {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  border: solid 0.3rem rgba(255,255,255,1);
+}
+button::before, .button::before {
+  background-color: white;
+  content: ' ';
+  opacity:0;
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  border-radius:1.5rem;
+  transition:0.25s ease;
+}
+button::after, .button::after {
+  content: ' ';
+}
+button:hover::before, .button:hover::before {
+  opacity: 0.34;
 }
 /**/
 div {
-  transition: 0.7s ease;
+  transition: 0.7s linear;
 }
 /**/
 .flex {

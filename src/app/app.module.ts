@@ -9,13 +9,15 @@ import { RouterModule }   from '@angular/router';
 import {ProfileService} from "./profile.service";
 import { RoamHomeComponent } from './roam-home/roam-home.component';
 import { RoamLoginComponent } from './roam-login/roam-login.component';
+import { RoamDashboardComponent } from './roam-dashboard/roam-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoamProfileComponent,
     RoamHomeComponent,
-    RoamLoginComponent
+    RoamLoginComponent,
+    RoamDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { RoamLoginComponent } from './roam-login/roam-login.component';
         pathMatch: 'full'
       },
       {path: 'login', component: RoamLoginComponent},
-      {path: 'profile', component: RoamProfileComponent}
+      {path: 'profile', component: RoamProfileComponent},
+      {path: 'dashboard', component: RoamDashboardComponent}
     ])
   ],
   providers: [ProfileService],
