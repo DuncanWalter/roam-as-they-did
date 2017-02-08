@@ -96,7 +96,7 @@ div {
 .flex {
   display: flex;
 }
-
+/**/
 .teal.light {
   background-color: #8CD2D1 !important;
 }
@@ -108,4 +108,16 @@ div {
 }
 .orange.dark {
   background-color: #F6956F !important;
+}
+/**/
+@keyframes exit {
+  0%   {opacity: 1; position:relative; bottom: 0;}
+  10%  {opacity: 0; position:relative; bottom: 15vh;}
+  100% {opacity: 0;}
+}
+.exit {
+  animation: exit 7s linear;
+}
+.exitable {
+  /*will exit using the exit animation upon component navigation*/
 }
