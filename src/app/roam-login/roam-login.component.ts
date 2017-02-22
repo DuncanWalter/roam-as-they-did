@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {RouterLink, RouterLinkWithHref, Router} from '@angular/router'
+import {Router} from '@angular/router'
 import {AppComponent} from "../app.component";
 declare const firebase : any;
 declare const $ : any;
@@ -23,7 +23,7 @@ export class RoamLoginComponent implements OnInit {
         $('input#password-field.roam').addClass('accepted');
         $('input#email-field.roam').addClass('accepted');
         setTimeout(()=>{
-          AppComponent.navigate(this.router,'/dashboard',true,[".login"]);
+          AppComponent.navigate(this.router,'/profile',true,[".login"]);
         }, 700);
       },
       (error) => {
@@ -41,7 +41,7 @@ export class RoamLoginComponent implements OnInit {
         $('input#password-field.roam').addClass('accepted');
         $('input#email-field.roam').addClass('accepted');
         setTimeout(()=>{
-          AppComponent.navigate(this.router,'/dashboard',true,[".login"]);
+          AppComponent.navigate(this.router,'/profile',true,[".login"]);
         }, 700);
       },
       (error) => {

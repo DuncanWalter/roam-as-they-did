@@ -1,23 +1,25 @@
-<div class="row container login" style="height:100vh;">
-  <div class="col s10 m6 l4 push-s1 push-m3 push-l4" style="display:flex;flex-direction:column;height:100%">
-    <div style="flex-grow:1"></div>
-    <div id="roam-icon" class="float"></div>
-    <div style="height:2.5rem"></div>
-    <div id="login-form" class="fade center-align">
-      <form>
+<div class="login" >
+  <div class="row container" style="height:100vh;">
+    <div class="col s10 m6 l4 push-s1 push-m3 push-l4" style="display:flex;flex-direction:column;height:100%">
+      <div style="flex-grow:1"></div>
+      <div id="roam-icon" class="float"></div>
+      <div style="height:2.5rem"></div>
+      <div id="login-form" class="fade center-align">
+        <form>
 
-        <label for="email-field"></label>
-        <input id='email-field' class="roam" name="email" [(ngModel)]="email" placeholder="EMAIL" type="email">
+          <label for="email-field"></label>
+          <input id='email-field' class="roam" name="email" [(ngModel)]="email" placeholder="EMAIL" type="email">
 
-        <label for="password-field"></label>
-        <input id='password-field' class="roam" name="password" [(ngModel)]="password" placeholder="PASSWORD" type="password">
+          <label for="password-field"></label>
+          <input id='password-field' class="roam" name="password" [(ngModel)]="password" placeholder="PASSWORD" type="password">
 
-        <div class="row flex">
-          <button type="submit" (click)="login()" class="light orange button">LOGIN  </button>
-          <button (click)="signUp()" class="light orange button">SIGN-UP</button>
-        </div>
-      </form>
+          <div class="row flex">
+            <button type="submit" (click)="login()" class="dark orange button">LOGIN</button>
+            <button (click)="signUp()" class="dark orange button">SIGN-UP</button>
+          </div>
+        </form>
+      </div>
+      <div style="flex-grow:1"></div>
     </div>
-    <div style="flex-grow:1"></div>
   </div>
 </div>

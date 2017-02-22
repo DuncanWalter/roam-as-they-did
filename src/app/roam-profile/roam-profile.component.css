@@ -1,0 +1,40 @@
+.profile-summary {
+  text-align: center;
+}
+.profile-splash-image {
+  background: #F6956F;
+  background: url(../../assets/splash.png) center no-repeat;
+  object-fit: cover;
+  align-content: center;
+  justify-content: center;
+  height: 225pt;
+  border-top: solid white 4px;
+  border-bottom: solid white 4px;
+  margin-bottom: 35pt;
+
+}
+.profile-image {
+  align-self: center;
+  content: "";
+  display: block;
+  position: relative;
+  background: #FFEEBF;
+  background: url(../../assets/profile.png) center no-repeat;
+  object-fit: cover;
+  height: 124pt;
+  width: 124pt;
+  border-radius: 50%;
+  top: 70pt;
+  border: solid white 4px;
+}
+
+.playlist {
+  height: 85pt;
+  border-radius: 6pt;
+  background: #F6956F;
+  margin-bottom: 1.3rem;
+}
+
+.padded {
+  padding: 1rem;
+}

@@ -1,35 +1,39 @@
-<p>
-  roam-profile works!
-</p>
-<div class="row">
-  <div class="col s12">
-    <h1>
-      HANDLE
-    </h1>
-    <h2>
-      First Last
-    </h2>
-  </div>
-  <div class="col s12 l6">
-    <div class="card-panel blue darken">
-      <h3>
-        Stuff1
-      </h3>
+<app-roam-header></app-roam-header>
+
+<div class="profile-splash-image flex row">
+  <div class="f1"></div>
+  <div class="profile-image"></div>
+  <div class="f1"></div>
+</div>
+
+<div class="flex row container">
+  <div class="f1"></div>
+  <div class="profile-summary">
+    <p><b id="name">FIRST LAST, AGE</b></p>
+    <p id="location">CITY, STATE</p>
+    <div class="row flex">
+      <div class="col f1">
+        <p>Playlists</p>
+        <p><b id="playlists">PC</b></p>
+      </div>
+      <div class="col f1">
+        <p>Likes</p>
+        <p><b id="likes">LC</b></p>
+      </div>
     </div>
   </div>
-  <div class="col s12 l6">
-    <div class="card-panel blue darken">
-      <h3>
-        Stuff2
-      </h3>
-    </div>
+  <div class="f1"></div>
+</div>
+
+<div class="row container">
+  <div class="padded">
+    <p>Playlists</p>
+    <div class="playlist"></div>
+    <div class="playlist"></div>
+    <div class="playlist"></div>
+    <div class="playlist"></div>
   </div>
 </div>
-<button class="btn blue darken" (click)="getProfile()">
-  getProfile
-</button>
-
-
 
 
 

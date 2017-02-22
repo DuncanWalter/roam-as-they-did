@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { ProfileService } from '../profile.service'
+declare const $: any;
+
 
 @Component({
   selector: 'roam-profile',
@@ -7,7 +9,7 @@ import { ProfileService } from '../profile.service'
   styleUrls: ['./roam-profile.component.css'],
   providers: []
 })
-export class RoamProfileComponent {
+export class RoamProfileComponent implements OnInit{
 
   constructor(private profileService: ProfileService){
 
@@ -16,6 +18,10 @@ export class RoamProfileComponent {
   getProfile(){
     // this uses an arrow lambda and a then-resolved promise to to a task asynchronously...
     this.profileService.getProfile().then(profile => console.dir(profile));
+  }
+
+  ngOnInit(){
+    $(".background").css('background','#FEF9D2');
   }
 
 }

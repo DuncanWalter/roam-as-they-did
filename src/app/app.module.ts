@@ -10,6 +10,8 @@ import {ProfileService} from "./profile.service";
 import { RoamHomeComponent } from './roam-home/roam-home.component';
 import { RoamLoginComponent } from './roam-login/roam-login.component';
 import { RoamDashboardComponent } from './roam-dashboard/roam-dashboard.component';
+import { RoamMobileFooterComponent } from './roam-mobile-footer/roam-mobile-footer.component';
+import { RoamHeaderComponent } from './roam-header/roam-header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { RoamDashboardComponent } from './roam-dashboard/roam-dashboard.componen
     RoamProfileComponent,
     RoamHomeComponent,
     RoamLoginComponent,
-    RoamDashboardComponent
+    RoamDashboardComponent,
+    RoamMobileFooterComponent,
+    RoamHeaderComponent
   ],
   imports: [
     BrowserModule,
